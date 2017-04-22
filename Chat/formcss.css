@@ -1,0 +1,10 @@
+.font {
+    font-family: arial;
+    color: white;
+}
+body
+{
+    background-image: url("bgform.jpg");
+    background-position: center;
+    background-size: 100%;
+}

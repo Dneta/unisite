@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title> chat</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="Styles/chat.css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+ 
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="Default.aspx">The New Era's Chat</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li id="Default" runat="server"><a href="Default.aspx" >Home</a></li> <!--class="active"-->
+                    <li ><a>Your Profile</a></li>
+                    <li><a>Add Contact</a></li>
+                    <li id="DeleteFriend" runat="server"><a href="DeleteFriend.aspx">Delete Contact</a></li>
+                    <li><a>New Group</a></li>
+                    <li><a>Groups</a></li>
+                     <li><a>Log Out</a></li>
+                </ul>
+            </div>
+        </nav>
+    <div class="navbar navbar-inverse navbar-fixed-left">
+  <a class="navbar-brand" href="#">Friends List</a>
+  <ul class="nav navbar-nav">
+   <%=friendpills %>
+  </ul>
+</div>
+    
+    <div class="container">
+    
+            
+        <div class="container">
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+</body>
+</html>

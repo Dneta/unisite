@@ -1,0 +1,10 @@
+﻿.font {
+    font-family: arial;
+    color: black;
+}
+body
+{
+    background-image: url("bgchat.jpg");
+    background-position: center;
+    background-size: 100%;
+}
